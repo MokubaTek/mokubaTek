@@ -3,3 +3,5 @@ steps:
   args: ['build', '-t', 'gcr.io/light-truth-353823/github.com/mokubatek/mokubatek:$COMMIT_SHA', '.']
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/light-truth-353823/github.com/mokubatek/mokubatek:$COMMIT_SHA']
+
+gcloud run deploy light-truth-353823 --region=europe-west1 --platform=managed --image=gcr.io/light-truth-353823/github.com/mokubatek/mokubatek:d367b5acb58f0b6d74ee3d8aaaf416326c228fc3
