@@ -5,4 +5,4 @@ steps:
   args: ['push', 'gcr.io/light-truth-353823/github.com/mokubatek/mokubatek:$COMMIT_SHA']
   
  - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['run', 'deploy', 'light-truth-353823', '--region=europe-west1', '--platform=managed', '--image=gcr.io/light-truth-353823/github.com/mokubatek/mokubatek:$SHORT_SHA']
+  args: ['run', 'deploy', 'light-truth-353823', '--region=europe-west1', '--platform=managed', '--image=gcr.io/light-truth-353823/github.com/mokubatek/mokubatek:$COMMIT_SHA']
